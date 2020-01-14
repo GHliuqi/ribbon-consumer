@@ -1,5 +1,6 @@
 package com.alan.ribbonconsumer.controller;
 
+import com.alan.ribbonconsumer.Service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,10 +15,10 @@ import org.springframework.web.client.RestTemplate;
 public class ConsumerController {
 
     @Autowired
-    RestTemplate restTemplate;
+    private HelloService helloService;
 
     @RequestMapping(value = "/ribbon-consumer",method = RequestMethod.GET)
     public String helloConsumer(){
-        return restTemplate.getForEntity("http://hearth-stone/1",String.class).getBody();
+        return helloService.helloService();
     }
 }
