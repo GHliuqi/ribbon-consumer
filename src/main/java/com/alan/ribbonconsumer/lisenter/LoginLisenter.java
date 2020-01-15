@@ -13,12 +13,12 @@ import javax.servlet.http.HttpSessionListener;
  * @date :  2020-01-14 15:43
  * @description :
  */
-@Component
-@WebListener
+//@Component
+//@WebListener
 public class LoginLisenter implements ServletRequestListener, ServletContextListener, HttpSessionListener {
 
     //统计session的数量 即登录人数
-    private static int onLine = 0;
+    public static int onLine = 0;
     /*-----------application的监听---------------*/
     @Override
     public void contextInitialized(ServletContextEvent sce) {

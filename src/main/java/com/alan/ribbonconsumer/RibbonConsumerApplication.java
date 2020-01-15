@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 //@EnableDiscoveryClient  //启动Eureka客户端注解
 //@SpringBootApplication
 @SpringCloudApplication //包含@EnableCircuitBreaker和@EnableDiscoveryClient还有@SpringBootApplication
-@ServletComponentScan(basePackages = {"com.alan.ribbonconsumer.listener", "com.alan.ribbonconsumer.filter"})
+//@ServletComponentScan(basePackages = {"com.alan.ribbonconsumer.listener", "com.alan.ribbonconsumer.filter"})
 public class RibbonConsumerApplication {
 
     @Bean   //spring容器管理
